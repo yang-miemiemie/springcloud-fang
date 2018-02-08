@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.mie.fang.pojo.dto.Page;
+import com.mie.fang.pojo.dto.in.PageIn;
 import com.mie.fang.pojo.po.LianjiaPO;
 
 @Repository
@@ -16,7 +16,7 @@ public class LianjiaDao {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public List<LianjiaPO> page(Page page){
+    public List<LianjiaPO> page(PageIn page){
     	Query query =new Query();
     	List<LianjiaPO> list=mongoTemplate.find(query, LianjiaPO.class).subList(page.getFromIndex(), page.getToIndex());
 		return list;

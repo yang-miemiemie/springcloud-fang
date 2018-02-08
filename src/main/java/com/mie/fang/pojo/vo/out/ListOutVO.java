@@ -1,7 +1,8 @@
 package com.mie.fang.pojo.vo.out;
 
 import java.util.List;
-import com.mie.fang.pojo.dto.BaseDTO;
+
+import com.mie.fang.pojo.dto.out.BaseDO;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,13 +11,13 @@ import io.swagger.annotations.ApiModelProperty;
 public class ListOutVO {
 	
 	@ApiModelProperty(value="数据列表")
-	private List<BaseDTO> list;
+	private List<BaseDO> list;
 
-	public List<BaseDTO> getList() {
+	public List<BaseDO> getList() {
 		return list;
 	}
 
-	public void setList(List<BaseDTO> list) {
+	public void setList(List<BaseDO> list) {
 		this.list = list;
 	}
 	

@@ -1,6 +1,6 @@
-package com.mie.fang.pojo.dto;
+package com.mie.fang.pojo.dto.in;
 
-public class Page {
+public class PageIn {
 	private int currentPage;
 	private int pageSize;
 	public int getCurrentPage() {
@@ -22,7 +22,7 @@ public class Page {
 		return  currentPage*pageSize;
 	}
 	
-	public Page(int currentPage,int pageSize) {
+	public PageIn(int currentPage,int pageSize) {
 		this.currentPage=currentPage;
 		this.pageSize=pageSize;
 	}

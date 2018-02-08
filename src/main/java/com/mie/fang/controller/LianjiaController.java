@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mie.fang.pojo.dto.BaseDTO;
+import com.mie.fang.pojo.dto.out.BaseDO;
 import com.mie.fang.pojo.vo.out.ListOutVO;
 import com.mie.fang.service.LianjiaService;
 
@@ -32,7 +32,7 @@ public class LianjiaController {
 	@RequestMapping(value = {"/list-{currentPage}-{pageSize}"},method=RequestMethod.GET)
 	public ListOutVO list(@PathVariable Integer currentPage,@PathVariable Integer pageSize) {
 		ListOutVO vo=new ListOutVO();
-		List<BaseDTO> list=lianjiaService.page(currentPage, pageSize);
+		List<BaseDO> list=lianjiaService.page(currentPage, pageSize);
 		vo.setList(list);
 		return vo;
 	}

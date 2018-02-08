@@ -1,4 +1,4 @@
-package com.mie.fang.pojo.dto;
+package com.mie.fang.pojo.dto.out;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @ApiModel(description="房屋基础信息")
-public class BaseDTO implements Serializable{
+public class BaseDO implements Serializable{
 	private static final long serialVersionUID = 1030256839483718348L;
 	
 	@ApiModelProperty(value="编号")
@@ -47,7 +47,7 @@ public class BaseDTO implements Serializable{
 		this.address = address;
 	}
 	
-	public BaseDTO(LianjiaPO po) {
+	public BaseDO(LianjiaPO po) {
 		this.id=po.getId();
 		this.name=po.getName();
 		this.price=po.getPrice();
