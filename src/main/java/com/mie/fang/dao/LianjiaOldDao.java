@@ -48,8 +48,9 @@ public class LianjiaOldDao {
     		query.addCriteria(Criteria.where("viliage").is(viliage));
     	}
     	query.with(new Sort(new Order(Direction.DESC, "publicdate")));
-    	List<LianjiaOldPO> list=mongoTemplate.find(query, LianjiaOldPO.class)
-    			.subList(page.getFromIndex(), page.getToIndex());
+    	query.skip(page.getFromIndex());
+    	query.limit(page.getPageSize());
+    	List<LianjiaOldPO> list=mongoTemplate.find(query, LianjiaOldPO.class);
 		return list;
     }
 
